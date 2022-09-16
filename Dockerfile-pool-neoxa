@@ -1,0 +1,24 @@
+FROM ubuntu:18.04
+
+RUN apt-get update \
+  && apt-get install -y git curl build-essential cmake libuv1-dev libssl-dev libboost-all-dev libhwloc-dev libsodium-dev
+
+RUN curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN apt-get install nodejs
+
+WORKDIR /pool/
+
+RUN npm install
+
+ADD . /pool/
+
+RUN mv pool_configs/neoxa_example.json pool_configs/neoxa.json
+
+EXPOSE 8117
+EXPOSE 1888
+EXPOSE 3333
+EXPOSE 5555
+EXPOSE 7777
+
+CMD node init.js
