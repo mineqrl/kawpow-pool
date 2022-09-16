@@ -1,0 +1,28 @@
+version: "2.4"
+services:
+  redis_neoxa:
+    image: redis:6.2.6
+    #      mem_limit: 1024000000
+    ports:
+      - 127.0.0.1:6449:6379
+    volumes:
+#        - ../myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+        - ../data/neoxa/db:/data
+#      external_links:
+#        - niadadb:mongo
+#        - niadastorage:storag
+
+  pool_neoxa:
+    build:
+      context: .
+      dockerfile: Dockerfile-pool-neoxa
+#    networks:
+#      - neoxa_network
+    ports:
+      - "8117:8117"
+      - "3334:3334"
+      - "4444:4444"
+      - "5555:5555"
+      - "7777:7777"
+      - "8088:8088"
+      - "17117:17117"
