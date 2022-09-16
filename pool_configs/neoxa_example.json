@@ -2,7 +2,7 @@
     "enabled": true,
     "coin": "neoxa.json",
 
-    "address": "GXUJSRkFHc6AJXMRyZTcA1xorKkXpU2RRe",
+    "address": "J11W4NbE4BBKmHT3aW4BdzbSj2Zsqz9TpT",
     
     "donateaddress": "GXUJSRkFHc6AJXMRyZTcA1xorKkXpU2RRe",
 
@@ -19,16 +19,16 @@
         "minConf": 30,
         "coinPrecision": 8,
         "daemon": {
-            "host": "127.0.0.1",
-            "port": 8888,
-            "user": "pool",
+            "host": "188.225.75.137",
+            "port": 19766,
+            "user": "neoxacoin",
             "password": "password"
         }
     },
 
     "ports": {
-		"10001": {
-            "diff": 0.5,
+		"3333": {
+            "diff": 0.1,
     	    "varDiff": {
     	        "minDiff": 0.001,
     	        "maxDiff": 32,
@@ -119,10 +119,10 @@
 
     "daemons": [
         {
-            "host": "127.0.0.1",
-            "port": 8888,
-            "user": "pool",
-            "password": "passwordhere"
+            "host": "188.225.75.137",
+            "port": 19766,
+            "user": "neoxacoin",
+            "password": "NSA9LPC6o2"
         }
     ],
 
